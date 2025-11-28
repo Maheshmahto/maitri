@@ -84,8 +84,8 @@ export default function MenuUI() {
 
           {/* SOCIAL ICONS */}
           <div className="flex justify-center md:justify-start gap-5">
-            <Image src="/images/instagram.png" width={40} height={30} alt="Instagram" />
-            <Image src="/images/faceBook.png" width={40} height={30} alt="Facebook" />
+            <Image src="/images/Instagram.png" width={40} height={30} alt="Instagram" />
+            <Image src="/images/Facebook.png" width={40} height={30} alt="Facebook" />
             <Image src="/images/Twitter.png" width={40} height={30} alt="Twitter" />
             <Image src="/images/Youtube.png" width={40} height={30} alt="YouTube" />
           </div>
