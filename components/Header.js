@@ -12,15 +12,22 @@ export default function Header() {
   // Close menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
+      // If menu is open and click is outside menu content
+      if (
+        menuOpen &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        // Also check if the click is not on the menu button
+        !event.target.closest('button[aria-label="menu"]')
+      ) {
         setMenuOpen(false);
       }
     };
 
-    if (menuOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    }
-
+    // Add event listener
+    document.addEventListener("mousedown", handleClickOutside);
+    
+    // Clean up
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
@@ -29,12 +36,8 @@ export default function Header() {
   return (
     <>
       {/* HEADER */}
-      <header
-        className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200"
-        style={{ padding: "0.75rem 2rem" }}
-      >
-        <div className="flex justify-between items-center lg:justify-between">
-          
+      <header className="fixed top-0 left-0 right-0 z-50 px-8 py-3 bg-white border-b border-gray-200">
+        <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="shrink-0">
             <Image
@@ -47,40 +50,49 @@ export default function Header() {
           </div>
 
           {/* Buttons */}
-          <div className="flex items-center" style={{ gap: "1rem" }}>
+          <div className="flex items-center gap-4">
             <button
-              className={`text-[20px] font-medium  rounded bg-[#C5A769] text-white transition-colors duration-200   hidden lg:block  ${montserrat.className}`}
-              style={{ padding: "0.625rem 2rem" }}
+              className={`hidden lg:block text-[20px] font-medium rounded bg-[#C5A769] text-white px-8 py-2.5 ${montserrat.className}`}
             >
               SIGN IN
             </button>
 
             <button
-              className={`text-[20px] font-medium bg-black text-white rounded hover:bg-gray-800 transition-colors duration-200 hidden lg:block   ${montserrat.className}`}
-              style={{ padding: "0.625rem 2rem" }}
+              className={`hidden lg:block text-[20px] font-medium bg-black text-white rounded hover:bg-gray-800 px-8 py-2.5 ${montserrat.className}`}
             >
               GET ACCESS
             </button>
 
-            {/* MENU ICON (opens menu UI) */}
-            <span
-              className="cursor-pointer block"
-              onClick={() => setMenuOpen(true)}
+            {/* MENU ICON */}
+            <button
+              onClick={() => {
+                console.log("Opening menu");
+                setMenuOpen(true);
+              }}
+              className="h-10 p-2 transition-colors rounded cursor-pointer"
+              aria-label="menu"
             >
-              <img src="/images/Group 18.png" alt="menu" />
-            </span>
+              <img
+                src="/images/Group 18.png"
+                alt="menu"
+              />
+            </button>
           </div>
         </div>
       </header>
 
       {/* MENU OVERLAY */}
       {menuOpen && (
-        <div className="fixed inset-0 z-60 flex justify-end ">
+        <div className="fixed inset-0 z-100">
+          {/* Overlay Background */}
+          <div className="absolute inset-0 " />
+          
+          {/* Menu Panel with ref */}
           <div 
             ref={menuRef}
-            className="h-full p-10 mt-10"
+            className="absolute top-20 right-10"
           >
-            <MenuUI />
+            <MenuUI setOpen={setMenuOpen} />
           </div>
         </div>
       )}
