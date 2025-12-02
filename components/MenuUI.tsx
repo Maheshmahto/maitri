@@ -186,7 +186,3 @@ const handleClose=()=>{
   );
 }
 //
-<<<<<<< HEAD
-
-=======
->>>>>>> beb8d5a9565d75f6917ed6dcea70b24cd822a7ef
