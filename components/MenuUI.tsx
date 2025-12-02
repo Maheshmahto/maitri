@@ -176,7 +176,7 @@ const handleClose=()=>{
           {/* SOCIAL ICONS */}
           <div className="absolute flex justify-center gap-5 2xl:bottom-14 lg:bottom-10 md:justify-end bottom-5">
             <Image src="/images/Instagram.png" width={40} height={30} alt="Instagram" />
-            <Image src="/images/Facebook.png" width={40} height={30} alt="Facebook" />
+            <Image src="/images/FaceBook.png" width={40} height={30} alt="Facebook" />
             <Image src="/images/Twitter.png" width={40} height={30} alt="Twitter" />
             <Image src="/images/Youtube.png" width={40} height={30} alt="YouTube" />
           </div>
@@ -186,4 +186,7 @@ const handleClose=()=>{
   );
 }
 //
+<<<<<<< HEAD
 
+=======
+>>>>>>> beb8d5a9565d75f6917ed6dcea70b24cd822a7ef
