@@ -1,147 +1,138 @@
-// "use client";
-// import Image from "next/image";
-
-// export default function HeroSection() {
-//   return (
-//     <section className="relative h-96 lg:h-screen w-full overflow-hidden mt-[109px] lg:mt-0">
-//       {/* Background Image */}
-//       {/* <div className="absolute inset-0 -z-10">
-//         <Image
-//           src="/images/heromobile.png"
-//           alt="Hero Background"
-//           fill
-//           priority
-//           placeholder="blur"
-//           blurDataURL="/images/HERO-BANNER.jpg"
-//           // className="object-fill object-center"
-//         />
-//         public/images/Group 25.png
-//       </div> */}
-// <div className="absolute inset-0 -z-10">
-//   {/* Mobile Image */}
-//   <Image
-//     src="/images/Mobile-version-HERO.jpg"
-//     alt="Hero Background"
-//     fill
-//     priority
-//     placeholder="blur"
-//     blurDataURL="/images/Mobile-version-HERO.jpg" // Use same image for blur
-//     className="object-cover object-center md:hidden"
-//     // Remove w-24 and max-w-full as they conflict with 'fill'
-//   />
-
-//   {/* Desktop Image */}
-//   <Image
-//     src="/images/HERO-BANNER.jpg"
-//     alt="Hero Background"
-//     fill
-//     priority
-//     placeholder="blur"
-//     blurDataURL="/images/HERO-BANNER.jpg"
-//     className="object-cover object-center hidden md:block"
-//   />
-// </div>
-//       {/* Center Content */}
-//       <div className="flex items-center justify-center h-full px-4">
-//         <img
-//           src="/images/white_logo.png"
-//           alt="Maitri Diamonds"
-//           fetchPriority="high"
-//           className="object-contain drop-shadow-xl lg:w-[212px] lg:h-[163px] w-24 "
-//         />
-//       </div>
-//     </section>
-//   );
-// }
-
 "use client";
 import Image from "next/image";
+import { cormorant, montserrat } from "../app/font";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-96 lg:h-screen w-full overflow-hidden mt-[109px] lg:mt-0">
+    <>
+      {/* =======================
+          1) PRELOAD HERO IMAGES
+      ======================== */}
+      <link rel="preload" href="/images/mobile-left.webp" as="image" />
+      <link rel="preload" href="/images/mobile-right.webp" as="image" />
 
-      {/* =========================================================
-          1) MOBILE / TABLET — DIAGONAL HERO (visible below lg)
-      ========================================================== */}
-   <div className="absolute inset-0 -z-10 lg:hidden">
+      <link rel="preload" href="/images/HERO SECTIONDESKTOP.webp" as="image" />
 
-  {/* Left diagonal image */}
-  <div
-    className="absolute inset-0 bg-cover bg-center"
-    style={{
-      backgroundImage: "url('/images/pexels-veeterzy-38136 1.png')",
-      clipPath: "polygon(0 0, 100% 0, 0 100%)",
-    }}
-  ></div>
+      <section className="relative h-96 lg:h-screen w-full overflow-hidden mt-[109px] lg:mt-0">
+        {/* =========================================================
+            MOBILE HERO SECTION (Visible only below lg)
+        ========================================================== */}
+        <div className="absolute inset-0 -z-10 lg:hidden">
+          {/* Left diagonal image */}
+          <div className="absolute inset-0 overflow-hidden lg:hidden">
+            <div
+              style={{
+                clipPath: "polygon(0 0, 100% 0, 0 100%)",
+              }}
+              className="absolute inset-0"
+            >
+              <Image
+                src="/images/mobile-left.webp"
+                alt="Left diagonal background"
+                fill
+                loading='eager'
+                className="object-cover"
+                fetchPriority="high"
+              />
+            </div>
+          </div>
 
-  {/* Right diagonal image */}
-  <div
-    className="absolute inset-0 bg-cover bg-center"
-    style={{
-      backgroundImage: "url('/images/30eb82b1d6f513c948c58eda11802961f9e6544b.jpg')",
-      clipPath: "polygon(100% 0, 100% 100%, 0 100%)",
-    }}
-  ></div>
+          {/* Right diagonal image */}
+          <div className="absolute inset-0 overflow-hidden lg:hidden">
+            <div
+              style={{
+                clipPath: "polygon(100% 0, 100% 100%, 0 100%)",
+              }}
+              className="absolute inset-0"
+            >
+              <Image
+                src="/images/mobile-right.webp"
+                alt="Right diagonal background"
+                fill
+                loading="eager"
+                className="object-cover"
+                fetchPriority="high"
+              />
+            </div>
+          </div>
 
-  {/* Gold Diagonal Border */}
-  {/* <div
-    className="absolute inset-0 z-10 pointer-events-none"
-    style={{
-      background:
-        "linear-gradient(135deg, transparent calc(50% - 2px), #C7A967 50%, transparent calc(50% + 2px))",
-    }}
-  ></div> */}
+          {/* Divider Line */}
+          <svg
+            className="absolute inset-0 w-full h-full pointer-events-none"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+          >
+            <line
+              x1="100%"
+              y1="0"
+              x2="0"
+              y2="100%"
+              stroke="#C7A967"
+              strokeWidth="2"
+              vectorEffect="non-scaling-stroke"
+            />
+          </svg>
 
-  {/* Center shape image */}
-  <img
-    src="/images/white_logo.png"
-    alt="Center Shape"
-    className="absolute top-1/2 left-1/2 w-20 -translate-x-1/2 -translate-y-1/2 z-10"
-  />
-</div>
+          {/* Small Center Logo */}
+          <Image
+            src="/images/white_logo.png"
+            alt="Center Logo"
+            width={120}
+            height={120}
+            priority
+            className="absolute z-10 w-20 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          />
+        </div>
 
+        {/* =========================================================
+            DESKTOP HERO SECTION (lg and up)
+        ========================================================== */}
+        <div className="absolute inset-0 hidden lg:block -z-10">
+          <Image
+            src="/images/HERO SECTIONDESKTOP.webp"
+            alt="Hero Background Desktop"
+            fill
+            priority
+            loading="eager"
+            // placeholder="blur"
+            // blurDataURL="/images/HERO-DESKTOP-blur.webp"
+            className="object-cover object-center"
+          />
+        </div>
 
-      {/* =========================================================
-          2) LARGE SCREEN (lg and up) — YOUR OLD HERO SECTION 
-      ========================================================== */}
-      <div className="hidden lg:block absolute inset-0 -z-10 2xl:block">
-        {/* Desktop Image */}
-        <Image
-          src="/images/HERO SECTIONDESKTOP.png"
-          alt="Hero Background Desktop"
-          fill
-          priority
-          placeholder="blur"
-          blurDataURL="/images/HERO-BANNER.jpg"
-          className="object-cover object-center"
-        />
-      </div>
-      <div className="hidden lg:block absolute inset-0 -z-10 2xl:hidden">
-        {/* laptop Image */}
-        <Image
-          src="/images/HEROLAPTOP.png"
-          alt="Hero Background Desktop"
-          fill
-          priority
-          placeholder="blur"
-          blurDataURL="images/HEROLAPTOP.png"
-          className="object-cover object-center"
-        />
-      </div>
+        {/* LAPTOP SIZE (between lg and 2xl) */}
+        <div className="absolute inset-0 hidden lg:block 2xl:hidden -z-10">
+          <Image
+            src="/images/HEROLAPTOP.webp"
+            alt="Laptop Hero"
+            fill
+            // placeholder="blur"
+            // blurDataURL="/images/HEROLAPTOP-blur.webp"
+            className="object-cover object-center"
+            loading="lazy"
+          />
+        </div>
 
-      {/* =========================================================
-          3) CENTER LOGO (visible on all sizes)
-      ========================================================== */}
-      <div className="lg:flex items-center justify-center h-full px-4 relative z-20 hidden ">
-        <img
-          src="/images/white_logo.png"
-          alt="Maitri Diamonds"
-          fetchPriority="high"
-          className="object-contain drop-shadow-xl lg:w-[212px] lg:h-[163px] w-24"
-        />
-      </div>
-    </section>
+        {/* =========================================================
+            CENTER LOGO FOR DESKTOP
+        ========================================================== */}
+        <div className="relative z-20 items-center justify-center hidden h-full px-4 lg:flex">
+          {/* <Image
+            src="/images/white_logo.png"
+            alt="Maitri Diamonds"
+            width={212}
+            height={163}
+            priority
+            className="object-contain drop-shadow-xl"
+          /> */}
+
+           <h2
+            className={`${cormorant.className} text-white text-2xl md:text-3xl  xl:text-[50px] xl:px-4 md:px-4   2xl:text-[80px] font-semibold tracking-[2px] text-center lg:text-left`}
+          >
+            FUTURE OF DIAMONDS
+          </h2>
+        </div>
+      </section>
+    </>
   );
 }
-

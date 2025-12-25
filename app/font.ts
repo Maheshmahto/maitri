@@ -7,7 +7,7 @@ export const cormorant = Cormorant_Garamond({
 
 export const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["500", "300", "400"],
+  weight: [ "100", "200", "300", "400" , "500"],
 });
 
 export const sourceSans = Source_Sans_3({

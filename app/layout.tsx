@@ -25,22 +25,25 @@
 // }
 import "./globals.css";
 import { ReactNode } from "react";
-// import { cormorant } from "./font"; // <- from fonts.ts
+import Header from "../components/Header";
+import Footer from '../components/Footer'
 
+// import { cormorant } from "./font"; // <- from fonts.ts
 export const metadata = {
   title: "MAITRI - Future of Diamonds",
   description: "Lab-grown sustainable diamonds with environmental stewardship",
 };
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" >
+    <html lang="en">
       <head>
         <link rel="icon" type="image/png" href="/logo_icon.png" />
       </head>
-      <body>{children}</body>
+      <body>
+        <Header></Header>
+        {children}
+        <Footer></Footer>
+        </body>
     </html>
   );
 }
-
-
-
