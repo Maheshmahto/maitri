@@ -28,7 +28,7 @@ export default function MenuUI({
   setOpen: (value: boolean) => void;
 }) {
   const [currentTimes, setCurrentTimes] = useState<Record<string, string>>({});
-  
+
   useEffect(() => {
     const getTimeForTimezone = (timezone: string) => {
       return new Date().toLocaleTimeString("en-US", {
@@ -61,8 +61,8 @@ export default function MenuUI({
   };
 
   return (
-    <section className="w-[] min-h-full sm:w-[400px] md:w-[500px] lg:w-[750px] xl:w-[1000px] 2xl:w-[1600px] mx-auto p-6 2xl:p-11 lg:p-8 bg-white lg:h-[440px] xl:h-[500px] 2xl:h-[580px] relative transition-all duration-300 overflow-y-auto">
-      {/* CLOSE BUTTON */}
+   <section className="w-full sm:w-[400px] md:w-[550px] lg:w-[750px] xl:w-[1000px] 2xl:w-[1600px] mx-auto p-6 2xl:p-11 lg:p-8 bg-white lg:h-[440px] xl:h-[500px] 2xl:h-[580px] relative transition-all duration-300 overflow-y-auto shadow-2xl z-50">
+    {/* CLOSE BUTTON */}
       <button
         onClick={handleClose}
         className="absolute top-3 left-4 text-2xl font-bold text-[#C7A967] hover:text-black transition block lg:hidden"
@@ -73,15 +73,17 @@ export default function MenuUI({
       {/* LAYOUT */}
       <div className="grid grid-cols-1 2xl:mt-6 md:grid-cols-2 gap-9 lg:gap-0">
         {/* LEFT MENU */}
-        <div className="pl-4 space-y-5 text-right md:text-left">
+        <div className="pl-4 space-y-3 md:space-y-5 text-right md:text-left">
           {menuItems.map((item) => (
             <Link
               key={item.name}
               href={item.href}
               onClick={handleMenuItemClick}
-              className={`block text-3xl md:text-3xl lg:text-[38px] 2xl:text-[43px] ${cormorant.className} ${
-                item.name === "Home" 
-                  ? "text-black hover:text-[#C7A967]" 
+              className={`block text-xl md:text-2xl lg:text-[34px] 2xl:text-[43px] ${
+                cormorant.className
+              } ${
+                item.name === "Home"
+                  ? "text-black hover:text-[#C7A967]"
                   : "text-[#C7A967] hover:text-black"
               } transition-colors`}
             >
@@ -92,7 +94,7 @@ export default function MenuUI({
 
         {/* RIGHT TIME ZONES */}
         <div className="flex flex-col items-center md:items-end md:pr-8 lg:pr-12">
-          <div className="relative flex flex-col items-end space-y-6 2xl:space-y-8 lg:space-y-7 2xl:top-35 lg:top-25">
+          <div className="relative flex flex-col items-end space-y-6 2xl:space-y-8 lg:space-y-7 2xl:top-35 lg:top-20 ">
             {timeZones.map(({ city, location }) => (
               <div key={city} className="text-right">
                 <div className="flex items-baseline justify-end gap-2">
@@ -115,13 +117,14 @@ export default function MenuUI({
           </div>
 
           {/* SOCIAL ICONS */}
-          <div className="absolute flex justify-center gap-5 2xl:bottom-14 lg:bottom-10 md:justify-end bottom-20">
+          {/* <div className="absolute flex justify-center gap-5 2xl:bottom-14 lg:bottom-10 md:justify-end bottom-20"> */}
+          <div className="flex justify-center gap-5 md:absolute 2xl:bottom-14 lg:bottom-8 md:justify-end md:bottom-6 mt-8 md:mt-0">
             <a href="#" target="_blank" rel="noopener noreferrer">
               <Image
                 src="/images/facebook_1.png"
                 width={64}
                 height={65}
-                className="w-8 h-8 md:w-16 md:h-16 lg:w-15 lg:h-15 hover:opacity-80 transition-opacity"
+                className="w-8 h-8 md:w-10 md:h-10 lg:w-15 lg:h-15 hover:opacity-80 transition-opacity"
                 alt="Facebook"
               />
             </a>
@@ -130,7 +133,7 @@ export default function MenuUI({
                 src="/images/Twitter_1.png"
                 width={64}
                 height={65}
-                className="w-8 h-8 md:w-16 md:h-16 lg:w-15 lg:h-15 hover:opacity-80 transition-opacity"
+                className="w-8 h-8  md:w-10 md:h-10 lg:w-15 lg:h-15 hover:opacity-80 transition-opacity"
                 alt="Twitter"
               />
             </a>
@@ -139,7 +142,7 @@ export default function MenuUI({
                 src="/images/Instragram_1.png"
                 width={64}
                 height={65}
-                className="w-8 h-8 md:w-16 md:h-16 lg:w-15 lg:h-15 hover:opacity-80 transition-opacity"
+                className="w-8 h-8  md:w-10 md:h-10 lg:w-15 lg:h-15 hover:opacity-80 transition-opacity"
                 alt="Instagram"
               />
             </a>
@@ -148,7 +151,7 @@ export default function MenuUI({
                 src="/images/youtube_1.png"
                 width={64}
                 height={65}
-                className="w-8 h-8 md:w-16 md:h-16 lg:w-15 lg:h-15 hover:opacity-80 transition-opacity"
+                className="w-8 h-8  md:w-10 md:h-10 lg:w-15 lg:h-15 hover:opacity-80 transition-opacity"
                 alt="YouTube"
               />
             </a>

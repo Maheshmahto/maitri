@@ -62,7 +62,7 @@ export default function Cultivated() {
           <h3 className="font-serif text-3xl">A Chronicle of Mastery</h3>
         </div>
       </section> */}
-      <div className="relative group mt-18 mb-20">
+      <div className="relative group mt-18">
         <Image
           src="/images/About-us_2 1.png"
           alt="Timeline"
@@ -71,18 +71,29 @@ export default function Cultivated() {
           className="w-full rounded-lg"
         />
         {/* Text Overlay - Center */}
-        <div className="absolute top-10 left-36 flex flex-col items-start justify-center ">
+        <div className="absolute top-10 left-25 flex flex-col items-start justify-center ">
           {/* <h1 className="text-black lg:text-5xl 2xl:text-5xl font-medium mb-10">2012</h1>
               <h1 className={`text-[#7A7161] lg:text-5xl 2xl:text-5xl ${cormorant.className}`}>
                 The Enquiry  <span className="italic">Begins</span>
               </h1> */}
-          <h2
+          {/* <h2
             className={`font-serif text-4xl md:text-7xl font-medium leading-tight mb-6 ${cormorant.className}`}
           >
             Cultivated with <span className="italic">Precision</span>
             <br />
             Created with <span className="italic">Care</span>
+          </h2> */}
+          <h2
+            className={`font-serif text-4xl md:text-7xl font-medium leading-tight mt-8 mb-4 ${cormorant.className}`}
+          >
+            Cultivated with <span className="italic">Precision</span>
+            <br />
+            Created with <span className="italic">Care</span>
           </h2>
+
+          <div className="mt-1 mb-10  h-px ">
+        <img className="w-[75%] " src="/images/Line 14.png" alt="" />
+      </div>
           <div className="max-w-2xl">
             <p
               className={`text-black text-sm md:text-base lg:text-2xl font-normal  leading-7 mb-5 ${montserrat.className}`}
@@ -104,8 +115,8 @@ export default function Cultivated() {
             </p>
           </div>
         </div>
-            <div className="text-center mt-20">
-          <div className="flex justify-center mb-3">
+            <div className="text-center mt-20 mb-12">
+          <div className="flex justify-center mb-3 ">
             <Image
               src="/images/logo_icon.png"
               alt="MAITRI LAB GROWN DIAMONDS"
@@ -115,7 +126,7 @@ export default function Cultivated() {
             />
           </div>
 
-          <h3 className={`lg:text-7xl ${cormorant.className}`}>A Chronicle of <span className="italic">Mastery</span></h3>
+          <h3 className={`lg:text-7xl font-medium   ${cormorant.className}`}>A Chronicle of <span className="italic">Mastery</span></h3>
         </div>
 
         {/* Or permanent text */}

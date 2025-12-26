@@ -1002,13 +1002,28 @@ export default function CommitmentSection() {
           </p>
         </div>
       </div>
-      <div className="w-full h-screen">
-        <img
-          src="/images/Section.png"
-          className="object-fill w-full h-full"
-          alt="Full screen section"
-          draggable={false}
-        />
+
+      <div className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-screen">
+        <picture>
+          {/* Mobile */}
+          <source
+            media="(max-width: 600px)"
+            srcSet="/images/mobileSustain.png"
+          />
+          {/* Tablet */}
+          <source
+            media="(min-width: 601px) and (max-width: 768px)"
+            srcSet="/images/SustainableTABLET.png"
+          />
+          {/* Large screens */}
+          <img
+            src="/images/Section.png"
+            className="object-cover w-full h-full"
+            alt="Full screen section"
+            draggable={false}
+            loading="lazy"
+          />
+        </picture>
       </div>
       {/* sticky container sized tall so scrollYProgress can drive the transitions */}
       <div ref={stickyRef} className="relative h-[420vh]">
@@ -1023,31 +1038,48 @@ export default function CommitmentSection() {
               opacity: img1Opacity,
             }}
           >
+            {/* Mobile Image */}
             <motion.img
-              src="/images/roseUSD.jpg"
-              className="object-cover w-full h-full"
+              src="/images/USP1MOBILE.png"
+              className="block sm:hidden object-cover w-full h-full"
               draggable={false}
               style={{ scale: img1Scale }}
               loading="lazy"
-              decoding="async"
             />
-          
-              <div
-              className={`absolute p-6 text-black rounded-lg top-60 left-10 bg-opacity-70 scale-[1] ${cormorant.className}`}
+
+            {/* Tablet Image */}
+            {/* <motion.img
+    src="/images/USP1TABLET.png"
+    className="hidden sm:block lg:hidden object-cover w-full h-full"
+    draggable={false}
+    style={{ scale: img1Scale }}
+    loading="lazy"
+  /> */}
+
+            {/* Desktop Image */}
+            <motion.img
+              src="/images/USP1LAPTOP.png"
+              className="hidden lg:block object-cover w-full h-full"
+              draggable={false}
+              style={{ scale: img1Scale }}
+              loading="lazy"
+            />
+
+            {/* Text Content */}
+            <div
+              className={`absolute p-6 text-white rounded-lg lg:top-60 top-15 lg:left-10 bg-opacity-70 ${cormorant.className}`}
             >
-              {" "}
-   
-             <h1 className="mb-8 text-5xl font-normal">
-                Empowering a sustainable future:
-                </h1>
-                 <h1 className="mb-8 text-6xl font-normal">
-                 Maitri Lab-Grown Diamonds and <br />
-                ESG Commitments
-              
+              <h1 className="mb-4 md:mb-8 text-3xl md:text-4xl lg:text-5xl xl:text-7xl">
+                We Grow Every Diamond,
+                <br />
+                You Get Every Advantage
               </h1>
-              <p className={`text-xl mt-9 text-[#C6A867] max-w-2xl ${montserrat.className}`}>
-                  Embracing ESG principles, our lab-grown diamonds redefine luxury
-                    with sustainability at its core.{" "}
+
+              <p
+                className={`text-sm md:text-lg lg:text-xl mt-4 text-[#C6A867] max-w-2xl ${montserrat.className}`}
+              >
+                From our Mumbai laboratory to your atelier, complete control
+                over every atom means absolute consistency in every stone.
               </p>
             </div>
           </motion.div>
@@ -1067,19 +1099,37 @@ export default function CommitmentSection() {
               style={{ scale: img2Scale }}
             />
 
-        
             <div
-              className={`absolute p-6  text-black rounded-lg top-60 left-10 bg-opacity-70  ${cormorant.className}`}
+              className={`
+    absolute
+    p-6
+    text-black
+    rounded-lg
+    bg-opacity-70
+    ${cormorant.className}
+
+    /* Mobile / Tablet */
+    top-90 left-4 text-left
+
+    /* Laptop & Desktop */
+    lg:bottom-16
+    lg:top-auto
+    lg:left-1/2
+    lg:-translate-x-1/2
+    lg:text-center
+    lg:max-w-5xl
+  `}
             >
-              <h1 className="mb-8 text-8xl  max-w-xl">
+              <h1 className="text-2xl lg:text-7xl lg:mb-8">
                 Always Where You Are !
               </h1>
 
-              <p className={`text-2xl text-[#C6A867] ${montserrat.className}`}>
+              <p
+                className={`text-base lg:text-2xl text-[#C6A867] ${montserrat.className}`}
+              >
                 Infrastructure behind excellence
               </p>
             </div>
-            
           </motion.div>
           {/* IMAGE 3: Third image */}
           <motion.div
@@ -1090,23 +1140,40 @@ export default function CommitmentSection() {
               opacity: img3Opacity,
             }}
           >
-            <motion.img
-              src="/images/DiamondUSD3.png"
-              className="object-fill w-full h-full"
-              draggable={false}
+            {/* Image container with scale */}
+            <motion.div
+              className="absolute inset-0 w-full h-full"
               style={{ scale: img3Scale }}
-            />
-            <div
-              className={`absolute p-6 text-black rounded-lg top-60 left-10 bg-opacity-70 scale-[1] ${cormorant.className}`}
             >
-              {" "}
-   
-              <h1 className="mb-8 text-7xl ">
+              <picture>
+                <source
+                  media="(max-width: 640px)"
+                  srcSet="/images/USPMOBILE.png"
+                />
+                <img
+                  src="/images/DiamondUSD3.png"
+                  className="object-contain w-full h-full"
+                  draggable={false}
+                  loading="lazy"
+                  alt="Diamond showcase"
+                />
+              </picture>
+            </motion.div>
+
+            {/* Text without scale - positioned separately */}
+            <div
+              className={`absolute p-4 md:p-6 text-black rounded-lg 
+                top-10 left-4 sm:top-20 sm:left-10 md:top-40 md:left-20 lg:top-60 lg:left-10 
+           backdrop-blur-sm  ${cormorant.className}`}
+            >
+              <h1 className="mb-4 md:mb-8 text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl mx-w-[150px] ">
                 We Grow Every Diamond,
                 <br />
                 You Get Every Advantage
               </h1>
-              <p className={`text-xl mt-9 text-[#C6A867] max-w-2xl ${montserrat.className}`}>
+              <p
+                className={`text-sm sm:text-base md:text-lg lg:text-xl  mt-4 md:mt-9 text-[#C6A867] max-w-[250px] sm:max-w-sm md:max-w-md lg:max-w-2xl ${montserrat.className}`}
+              >
                 From our Mumbai laboratory to your atelier, complete control
                 over every atom means absolute consistency in every stone.
               </p>
@@ -1122,22 +1189,47 @@ export default function CommitmentSection() {
               opacity: img4Opacity,
             }}
           >
-            <motion.img
-              src="/images/Website-assets.jpg"
-              className="object-cover w-full h-full"
-              draggable={false}
+            {/* Scale applied only to image container */}
+            <motion.div
+              className="absolute inset-0 w-full h-full"
               style={{ scale: img4Scale }}
-            />
-            <div
-              className={`absolute p-6  text-black rounded-lg top-60 left-10 bg-opacity-70  ${montserrat.className}`}
             >
-              {" "}
-              <h1 className="mb-4 text-5xl ">
+              <picture>
+                {/* Mobile */}
+                <source
+                  media="(max-width: 640px)"
+                  srcSet="/images/USP-4MOBILE.png"
+                />
+                {/* Tablet */}
+                {/* <source
+        media="(max-width: 768px)"
+        srcSet="/images/Website-assets-tablet.jpg"
+      /> */}
+                {/* Desktop */}
+                <img
+                  src="/images/Website-assets.jpg"
+                  className="object-cover w-full h-full"
+                  draggable={false}
+                  loading="lazy"
+                  alt="Diamond jewelry collection"
+                />
+              </picture>
+            </motion.div>
+
+            {/* Text stays fixed (no scale) */}
+            <div
+              className={`absolute p-4 md:p-6 text-black rounded-lg 
+                top-10 left-4 sm:top-20 sm:left-10 md:top-40 md:left-20 lg:top-60 lg:left-10 
+                bg-white/70 backdrop-blur-sm  ${cormorant.className}`}
+            >
+              <h1 className="mb-4 md:mb-8 text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl mx-w-[150px] ">
                 We Grow Every Diamond,
                 <br />
                 You Get Every Advantage
               </h1>
-              <p className="text-2xl max-w-2xl">
+              <p
+                className={`text-sm sm:text-base md:text-lg lg:text-xl  mt-4 md:mt-9 text-[#C6A867] max-w-[250px] sm:max-w-sm md:max-w-md lg:max-w-2xl ${montserrat.className}`}
+              >
                 From our Mumbai laboratory to your atelier, complete control
                 over every atom means absolute consistency in every stone.
               </p>
