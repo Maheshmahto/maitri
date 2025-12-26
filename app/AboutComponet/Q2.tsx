@@ -1,19 +1,19 @@
-import { cormorant, montserrat } from "../font";
+import { montserrat,cormorant } from "../../app/font";
+
 
 export default function Q2() {
   return (
     <main className="min-h-screen bg-black flex flex-col items-center justify-center text-center px-6">
       {/* Title */}
       <h1
-        className={`text-white  text-3xl md:text-4xl lg:text-5xl tracking-wide${cormorant.className} `}
+        className={`text-white  text-3xl md:text-5xl lg:text-5xl tracking-wide ${cormorant.className} `}
       >
         Our Scientific Mastery.Multiple Applications.
         {/* <span className="block mt-2"></span> */}
       </h1>
 
       {/* Divider */}
-      {/* <div className="w-32 h-px bg-yellow-600 my-10">
-      </div> */}
+      
       <div className="mt-10 mb-10">
         <img src="/images/Line 14.png" alt="" />
       </div>

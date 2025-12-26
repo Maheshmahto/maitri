@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { cormorant, montserrat } from "../font";
+
 
 const Card = () => {
   return (
@@ -8,15 +10,13 @@ const Card = () => {
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-24">
-            <h2 className="text-[#C8A35D] text-sm font-semibold tracking-[0.3em] mb-4">
+            <h2 className={`text-[#C8A35D] text-2xl font-bold tracking-[0.3em] mb-4 ${montserrat.className}`}>
               THE
             </h2>
 
-            <h1 className="text-5xl md:text-6xl font-light tracking-[0.2em] mb-4">
-              MAITRI
-            </h1>
+           <Image src="/images/Vector.png" alt="MAITRI" width={100} height={50} className="mx-auto mb-4"/>
 
-            <h2 className="text-[#C8A35D] text-sm font-semibold tracking-[0.3em]">
+            <h2 className={`text-[#C8A35D] text-2xl font-bold tracking-[0.3em] ${montserrat.className}`}>
               PROMISE
             </h2>
 
@@ -39,17 +39,17 @@ const Card = () => {
               </div>
 
               <div className="px-6 pt-8 text-center">
-                <h3 className="text-lg font-semibold tracking-wide mb-4">
+                <h3 className={`text-lg font-semibold tracking-wide mb-4 ${montserrat.className}`}>
                   FOR OUR PLANET
                 </h3>
 
-                <p className="text-gray-600 leading-relaxed mb-8">
+                <p className={`text-gray-600 leading-relaxed mb-8 ${montserrat.className}`}>
                   Mining moves 1,000 tons of earth per carat. We move zero.
                   Climate-neutral operations, SCS-007 certified, proving luxury and
                   sustainability are inseparable.
                 </p>
 
-                <button className="bg-black text-white px-8 py-3 text-xs tracking-widest rounded-full hover:bg-gray-800 transition">
+                <button className={`bg-black text-white px-8 py-3 text-xs tracking-widest rounded-full hover:bg-gray-800 transition ${montserrat.className}`}>
                   LEARN MORE
                 </button>
               </div>
@@ -67,17 +67,17 @@ const Card = () => {
               </div>
 
               <div className="px-6 pt-8 text-center">
-                <h3 className="text-lg font-semibold tracking-wide mb-4">
+                <h3 className={`text-lg font-semibold tracking-wide mb-4 ${montserrat.className}`}>
                   FOR OUR PEOPLE
                 </h3>
 
-                <p className="text-gray-600 leading-relaxed mb-8">
+                <p className={`text-gray-600 leading-relaxed mb-8 ${montserrat.className}`}>
                   Our Mumbai labs employ scientists, artisans, and skilled workers.
                   These aren't assembly lines—they're labs where human expertise
                   meets cutting-edge technology.
                 </p>
 
-                <button className="bg-black text-white px-8 py-3 text-xs tracking-widest rounded-full hover:bg-gray-800 transition">
+                <button className={`bg-black text-white px-8 py-3 text-xs tracking-widest rounded-full hover:bg-gray-800 transition ${montserrat.className}`}>
                   LEARN MORE
                 </button>
               </div>
@@ -95,17 +95,17 @@ const Card = () => {
               </div>
 
               <div className="px-6 pt-8 text-center">
-                <h3 className="text-lg font-semibold tracking-wide mb-4">
+                <h3 className={`text-lg font-semibold tracking-wide mb-4 ${montserrat.className}`}>
                   FOR OUR COMMUNITIES
                 </h3>
 
-                <p className="text-gray-600 leading-relaxed mb-8">
+                <p className={`text-gray-600 leading-relaxed mb-8 ${montserrat.className}`}>
                   The MAITRI Foundation channels 2% of annual revenue into
                   education, healthcare, and empowerment programs in the
                   communities where our craftspeople live and work.
                 </p>
 
-                <button className="bg-black text-white px-8 py-3 text-xs tracking-widest rounded-full hover:bg-gray-800 transition">
+                <button className={`bg-black text-white px-8 py-3 text-xs tracking-widest rounded-full hover:bg-gray-800 transition ${montserrat.className}`}>
                   LEARN MORE
                 </button>
               </div>
@@ -126,16 +126,16 @@ const Card = () => {
           </div>
 
           {/* Title */}
-          <h2 className="text-4xl md:text-5xl mb-6">
+          <h2 className={`  text-4xl md:text-5xl mb-6 ${cormorant.className}`}>
             <span className="font-light">How We're </span>
             <span className="italic font-serif">Making Change</span>
           </h2>
 
           {/* Subtitle */}
-          <p className="text-gray-700 text-lg mb-2">
+          <p className={`text-gray-700 text-lg mb-2 ${cormorant.className}`}>
             Stepping away from depletion towards cultivation.
           </p>
-          <p className="text-gray-700 text-lg">
+          <p className={`text-gray-700 text-lg ${cormorant.className}`}>
             <span className="italic">From taking to giving back.</span> From scarcity mindset to abundance through innovation.
           </p>
         </div>
