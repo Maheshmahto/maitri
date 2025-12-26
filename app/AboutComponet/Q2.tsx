@@ -39,7 +39,7 @@ export default function Q2() {
 
       {/* Logo */}
       <div className="mt-16 flex flex-col items-center">
-        <img src="/images/Q2.png" height={195} width={184}></img>
+        <img src="/images/Q2.png" height={185} width={134}></img>
       </div>
 
       {/* Footer */}

@@ -15,55 +15,62 @@ export default function Cultivated() {
           className="w-full rounded-lg"
         />
         {/* Text Overlay - Center */}
-        <div className="absolute top-10 left-25 flex flex-col items-start justify-center ">
+       <div className="absolute top-[40px] left-[140px] flex flex-col items-start">
 
-          <h2
-            className={`font-serif font-medium text-[65px] leading-[65px] tracking-[0em] max-w-[942px] mt-8 mb-4 ${cormorant.className}`}
-          >
-            <span className="block">
-              Cultivated with{" "}
-              <span className={`italic font-semi-bold `}>Precision</span>
-            </span>
-            <span className="block">
-              Created with{" "}
-              <span className={`italic font-semi-bold `}>Care</span>
-            </span>
-          </h2>
+  {/* Heading */}
+  <h2
+    className={`font-serif font-medium text-[65px] leading-[65px] tracking-[0em] max-w-[802px] mb-6 ${cormorant.className}`}
+  >
+    <span className="block">
+      Cultivated with{" "}
+      <span className="italic font-semibold">Precision</span>
+    </span>
+    <span className="block">
+      Created with{" "}
+      <span className="italic font-semibold">Care</span>
+    </span>
+  </h2>
 
+  {/* Divider */}
+  <img
+    src="/images/Line 14.png"
+    alt="line"
+    className="w-[75%] mb-8"
+  />
 
+  {/* Description */}
+  <p
+    className={`text-black font-normal text-[18px] leading-[31px] tracking-[0.05em] max-w-[650px] mb-6 ${montserrat.className}`}
+  >
+    At Maitri, we believe the future of diamonds isn't found by digging
+    deeper into the earth—it's cultivated through human ingenuity,
+    scientific precision, and genuine care for the world we'll leave
+    behind.
+  </p>
 
-          <div className="mt-1 mb-6  h-px ">
-            <img className="w-[75%] " src="/images/Line 14.png" alt="line" />
-          </div>
-          <div className="max-w-2xl">
-            <p
-              className={`text-black font-normal text-[19px] leading-[30px] tracking-[0.05em] max-w-[777px] mb-5 ${montserrat.className}`}
-            >
-              At Maitri, we believe the future of diamonds isn't found by
-              digging deeper into the earth—it's cultivated through human
-              ingenuity, scientific precision, and genuine care for the world
-              we'll leave behind.
-            </p>
+  {/* Sub text */}
+  <p
+    className={`text-black font-normal text-[18px] leading-[41px] tracking-[0.05em] mb-2 ${montserrat.className}`}
+  >
+    This is why we exist. This is what we mean when we say:
+  </p>
 
-            <p
-              className={`text-black text-sm md:text-base lg:text-xl font-normal leading-7 mb-1 ${montserrat.className}`}
-            >
-              This is why we exist. This is what we mean when we say:
-            </p>
-            <p
-              className={`uppercase tracking-[7px] text-[#c9a24d] font-semibold lg:text-2xl mt-4 ${montserrat.className}`}
-            >
-              We are the future of diamonds.
-            </p>
-          </div>
-        </div>
+  {/* Highlight statement */}
+  <p
+    className={`uppercase text-[25px] leading-[41px] tracking-[0.2em] font-bold text-[#c9a24d] ${montserrat.className}`}
+  >
+    We are the future of diamonds.
+  </p>
+
+</div>
+
         <div className="text-center mt-20 mb-12">
-          <div className="flex justify-center mb-3 ">
+          <div className="flex justify-center mb-5 ">
             <Image
               src="/images/logo_icon.png"
               alt="MAITRI LAB GROWN DIAMONDS"
-              width={60}
-              height={20}
+              width={55}
+              height={18}
               className="object-contain"
             />
           </div>
