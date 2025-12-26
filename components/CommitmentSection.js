@@ -1142,7 +1142,7 @@ export default function CommitmentSection() {
                 />
                 <img
                   src="/images/DiamondUSD3.png"
-                  className="object-contain w-full h-full"
+                  className="object-cover w-full h-full"
                   draggable={false}
                   loading="lazy"
                   alt="Diamond showcase"
