@@ -1047,16 +1047,6 @@ export default function CommitmentSection() {
               loading="lazy"
             />
 
-            {/* Tablet Image */}
-            {/* <motion.img
-    src="/images/USP1TABLET.png"
-    className="hidden sm:block lg:hidden object-cover w-full h-full"
-    draggable={false}
-    style={{ scale: img1Scale }}
-    loading="lazy"
-  /> */}
-
-            {/* Desktop Image */}
             <motion.img
               src="/images/USP1LAPTOP.png"
               className="hidden lg:block object-cover w-full h-full"
@@ -1093,7 +1083,7 @@ export default function CommitmentSection() {
             }}
           >
             <motion.img
-              src="/images/map.webp"
+              src="/images/worldMap.png"
               className="object-fill w-full h-full "
               draggable={false}
               style={{ scale: img2Scale }}
@@ -1220,7 +1210,7 @@ export default function CommitmentSection() {
             <div
               className={`absolute p-4 md:p-6 text-black rounded-lg 
                 top-10 left-4 sm:top-20 sm:left-10 md:top-40 md:left-20 lg:top-60 lg:left-10 
-                bg-white/70 backdrop-blur-sm  ${cormorant.className}`}
+                   ${cormorant.className}`}
             >
               <h1 className="mb-4 md:mb-8 text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl mx-w-[150px] ">
                 We Grow Every Diamond,
