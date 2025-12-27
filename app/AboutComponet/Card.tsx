@@ -10,11 +10,11 @@ const Card = () => {
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-24">
-            <h2 className={`text-[#C8A35D] text-2xl font-bold tracking-[0.3em] mb-4 ${montserrat.className}`}>
+            <h2 className={`text-[#C8A35D] text-2xl font-bold tracking-[0.3em] mb-8 ${montserrat.className}`}>
               THE
             </h2>
 
-           <Image src="/images/Vector.png" alt="MAITRI" width={100} height={50} className="mx-auto mb-4"/>
+           <Image src="/images/Vector.png" alt="MAITRI" width={240} height={50} className="mx-auto mb-4"/>
 
             <h2 className={`text-[#C8A35D] text-2xl font-bold tracking-[0.3em] ${montserrat.className}`}>
               PROMISE
@@ -39,17 +39,19 @@ const Card = () => {
               </div>
 
               <div className="px-6 pt-8 text-center">
-                <h3 className={`text-lg font-semibold tracking-wide mb-4 ${montserrat.className}`}>
-                  FOR OUR PLANET
-                </h3>
+                <h3
+  className={`text-sm font-semibold tracking-[0.2em] mb-4 ${montserrat.className}`}>
+  FOR OUR PLANET
+</h3>
 
-                <p className={`text-gray-600 leading-relaxed mb-8 ${montserrat.className}`}>
+
+                <p className={`text-gray-600  mb-8 ${montserrat.className}`}>
                   Mining moves 1,000 tons of earth per carat. We move zero.
                   Climate-neutral operations, SCS-007 certified, proving luxury and
                   sustainability are inseparable.
                 </p>
 
-                <button className={`bg-black text-white px-8 py-3 text-xs tracking-widest rounded-full hover:bg-gray-800 transition ${montserrat.className}`}>
+                <button className={`bg-black text-white px-6 py-2 text-xs tracking-widest rounded-full hover:bg-gray-800 transition ${montserrat.className}`}>
                   LEARN MORE
                 </button>
               </div>
@@ -67,17 +69,17 @@ const Card = () => {
               </div>
 
               <div className="px-6 pt-8 text-center">
-                <h3 className={`text-lg font-semibold tracking-wide mb-4 ${montserrat.className}`}>
+                <h3 className={`text-lg font-semibold tracking-[0.2em] mb-4 ${montserrat.className}`}>
                   FOR OUR PEOPLE
                 </h3>
 
-                <p className={`text-gray-600 leading-relaxed mb-8 ${montserrat.className}`}>
+                <p className={`text-gray-600  mb-8 ${montserrat.className}`}>
                   Our Mumbai labs employ scientists, artisans, and skilled workers.
                   These aren't assembly lines—they're labs where human expertise
                   meets cutting-edge technology.
                 </p>
 
-                <button className={`bg-black text-white px-8 py-3 text-xs tracking-widest rounded-full hover:bg-gray-800 transition ${montserrat.className}`}>
+                <button className={`bg-black text-white px-6 py-2 text-xs tracking-widest rounded-full hover:bg-gray-800 transition ${montserrat.className}`}>
                   LEARN MORE
                 </button>
               </div>
@@ -85,7 +87,7 @@ const Card = () => {
 
             {/* Card 3 */}
             <div>
-              <div className="relative h-[260px] w-full rounded-2xl overflow-hidden">
+              <div className="relative h-[260px] w-full rounded-2xl overflow-hidden ">
                 <Image
                   src="/images/community.png"
                   alt="For our communities"
@@ -95,17 +97,17 @@ const Card = () => {
               </div>
 
               <div className="px-6 pt-8 text-center">
-                <h3 className={`text-lg font-semibold tracking-wide mb-4 ${montserrat.className}`}>
+                <h3 className={`text-lg font-semibold tracking-[0.2em] mb-4 ${montserrat.className}`}>
                   FOR OUR COMMUNITIES
                 </h3>
 
-                <p className={`text-gray-600 leading-relaxed mb-8 ${montserrat.className}`}>
+                <p className={`text-gray-600  mb-8 ${montserrat.className}`}>
                   The MAITRI Foundation channels 2% of annual revenue into
                   education, healthcare, and empowerment programs in the
                   communities where our craftspeople live and work.
                 </p>
 
-                <button className={`bg-black text-white px-8 py-3 text-xs tracking-widest rounded-full hover:bg-gray-800 transition ${montserrat.className}`}>
+                <button className={`bg-black  text-white px-6 py-2 text-xs tracking-widest rounded-full hover:bg-gray-800 transition ${montserrat.className}`}>
                   LEARN MORE
                 </button>
               </div>
@@ -116,7 +118,7 @@ const Card = () => {
 
       {/* How We're Making Change Section */}
       <div className="py-20 px-4" style={{backgroundColor: '#F5F2EB'}}>
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
           {/* Gold Diamond Icon */}
           <div className="flex justify-center mb-8 h-10">
             {/* <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -126,16 +128,16 @@ const Card = () => {
           </div>
 
           {/* Title */}
-          <h2 className={`  text-4xl md:text-5xl mb-6 ${cormorant.className}`}>
-            <span className="font-light">How We're </span>
+          <h2 className={`  text-4xl md:text-6xl mb-6 ${cormorant.className}`}>
+            <span className="font-semibold">How We're </span>
             <span className="italic font-serif">Making Change</span>
           </h2>
 
           {/* Subtitle */}
-          <p className={`text-gray-700 text-lg mb-2 ${cormorant.className}`}>
+          <p className={`text-black text-3xl mb-2 font-medium ${cormorant.className}`}>
             Stepping away from depletion towards cultivation.
           </p>
-          <p className={`text-gray-700 text-lg ${cormorant.className}`}>
+          <p className={`text-black text-3xl font-medium ${cormorant.className}`}>
             <span className="italic">From taking to giving back.</span> From scarcity mindset to abundance through innovation.
           </p>
         </div>
