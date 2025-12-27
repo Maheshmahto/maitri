@@ -399,13 +399,13 @@ export default function FutureSection() {
           {" "}
           {/* Centered container */}
           <p
-            className={`text-black text-sm md:text-base lg:text-lg font-medium ${montserrat.className}`}
+            className={`text-black text-sm md:text-base lg:text-[18px] font-medium ${montserrat.className}`}
           >
             The world&apos;s fully traceable, 100% Climate Neutral and
             Sustainability Rated Lab-Grown Diamonds.
           </p>
           <p
-            className={`text-black text-sm md:text-base lg:text-lg font-medium mt-2 ${montserrat.className}`}
+            className={`text-black text-sm md:text-base lg:text-[18px] font-medium  ${montserrat.className}`}
           >
             Grown in our Indian laboratory using patented CVD technology.
           </p>
@@ -421,8 +421,8 @@ export default function FutureSection() {
             <Image
               src="/images/logo_icon.png"
               alt="Logo"
-              width={180}
-              height={180}
+              width={100}
+              height={100}
               className="opacity-90"
             />
           </div>
