@@ -947,8 +947,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { cormorant, montserrat } from "../app/font";
 
-
-
 export default function CommitmentSection() {
   const stickyRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -1063,7 +1061,9 @@ export default function CommitmentSection() {
             <div
               className={`absolute p-6 text-white rounded-lg lg:top-60 top-15 lg:left-20 bg-opacity-70 `}
             >
-              <h3 className={`mb-4 md:mb-8 text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-normal ${cormorant.className}`}>
+              <h3
+                className={`mb-4 md:mb-8 text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-normal ${cormorant.className}`}
+              >
                 We Grow Every Diamond,
                 <br />
                 You Get Every Advantage
@@ -1094,10 +1094,10 @@ export default function CommitmentSection() {
             >
               <picture>
                 {/* Mobile */}
-                <source
+                {/* <source
                   media="(max-width: 640px)"
                   srcSet="/images/USP-3 1.png"
-                />
+                /> */}
                 {/* public\images\ */}
                 {/* Desktop */}
                 <img
@@ -1117,7 +1117,7 @@ export default function CommitmentSection() {
                   ${cormorant.className}`}
             >
               <p
-                className={`text-sm sm:text-base md:text-lg lg:text-[59px]  mt-4 md:mt-9  max-w-[290px] sm:max-w-sm md:max-w-md lg:max-w-3xl xl:max-w-4xl  ${cormorant.className}`}
+                className={`text-sm sm:text-base md:text-lg  lg:text-4xl xl:text-[50px] 2xl:text-[59] mt-4 md:mt-9  max-w-[290px] sm:max-w-sm md:max-w-md lg:max-w-2xl xl:max-w-4xl  ${cormorant.className}`}
               >
                 Empowering a sustainable future:
               </p>
