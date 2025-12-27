@@ -1063,14 +1063,14 @@ export default function CommitmentSection() {
             <div
               className={`absolute p-6 text-white rounded-lg lg:top-60 top-15 lg:left-20 bg-opacity-70 `}
             >
-              <h3 className={`mb-4 md:mb-8 text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-normal ${cormorant.className}`}>
+              <h3 className={`mb-4 md:mb-8 text-3xl md:text-4xl lg:text-5xl xl:text-[56px] 2xl:text-6xl  font-normal ${cormorant.className}`}>
                 We Grow Every Diamond,
                 <br />
                 You Get Every Advantage
               </h3>
 
               <p
-                className={`text-sm md:text-lg lg:text-xl mt-4 text-[#C6A867] max-w-xl ${montserrat.className}`}
+                className={`text-sm md:text-lg lg:text-[18px] 2xl:xl mt-4 text-[#C6A867] max-w-lg ${montserrat.className}`}
               >
                 From our Mumbai laboratory to your atelier, complete control
                 over every atom means absolute consistency in every stone.
@@ -1113,20 +1113,20 @@ export default function CommitmentSection() {
             {/* Text stays fixed (no scale) */}
             <div
               className={`absolute p-4 md:p-6 text-black rounded-lg 
-                top-10 left-4 sm:top-20 sm:left-10 md:top-40 md:left-20 lg:top-45 lg:left-20 
+                top-10 left-4 sm:top-20 sm:left-10 md:top-40 md:left-20 lg:top-45 lg:left-15 
                   ${cormorant.className}`}
             >
               <p
-                className={`text-sm sm:text-base md:text-lg lg:text-[59px]  mt-4 md:mt-9  max-w-[290px] sm:max-w-sm md:max-w-md lg:max-w-3xl xl:max-w-4xl  ${cormorant.className}`}
+                className={`text-sm sm:text-base md:text-3xl lg:text-[44px] 2xl:text-[50px] mt-4 md:mt-9  max-w-[290px] sm:max-w-sm md:max-w-md lg:max-w-3xl xl:max-w-4xl  ${cormorant.className}`}
               >
                 Empowering a sustainable future:
               </p>
-              <h1 className="mb-4 md:mb-8 text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-[75px] mx-w-[150px] ">
+              <h1 className="mb-4 md:mb-8 text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-[65px] mx-w-[150px] ">
                 Maitri Lab-Grown Diamonds and <br></br>
                 ESG Commitments
               </h1>
               <p
-                className={`text-sm sm:text-base md:text-lg lg:text-xl  xl:text-[23px] mt-4 md:mt-9 text-[#C6A867] max-w-[250px] sm:max-w-sm md:max-w-md lg:max-w-2xl xl:max-w-4xl  ${montserrat.className}`}
+                className={`text-sm sm:text-base md:text-lg lg:text-xl  xl:text-[20px] mt-4 md:mt-2 text-[#C6A867] max-w-[250px] sm:max-w-sm md:max-w-md lg:max-w-2xl xl:max-w-3xl  ${montserrat.className}`}
               >
                 Embracing ESG principles, our lab-grown diamonds redefine luxury
                 with sustainability at its core.
@@ -1166,16 +1166,16 @@ export default function CommitmentSection() {
             {/* Text without scale - positioned separately */}
             <div
               className={`absolute p-4 md:p-6 text-black rounded-lg 
-                top-10 left-4 sm:top-20 sm:left-10 md:top-40 md:left-20 lg:top-60 lg:left-25 
+                top-10 left-4 sm:top-20 sm:left-10 md:top-40 md:left-20 lg:top-60 lg:left-20 
              ${cormorant.className}`}
             >
-              <h1 className="mb-4 md:mb-8 text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl mx-w-[150px] ">
+              <h1 className="mb-4 md:mb-8 text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] 2xl:text-6xl mx-w-[150px] ">
                 We Grow Every Diamond,
                 <br />
                 You Get Every Advantage
               </h1>
               <p
-                className={`text-sm sm:text-base md:text-lg lg:text-xl  mt-4 md:mt-9 text-[#C6A867] max-w-[250px] sm:max-w-sm md:max-w-md lg:max-w-xl ${montserrat.className}`}
+                className={`text-sm sm:text-base md:text-lg lg:text-xl  mt-4 md:mt-9 text-[#C6A867] max-w-[250px] sm:max-w-sm md:max-w-md lg:max-w-lg ${montserrat.className}`}
               >
                 From our Mumbai laboratory to your atelier, complete control
                 over every atom means absolute consistency in every stone.
@@ -1220,8 +1220,8 @@ export default function CommitmentSection() {
     lg:max-w-5xl
   `}
             >
-              <h1 className="text-2xl lg:text-6xl lg:mb-8">
-                Always Where You Are !
+              <h1 className="text-2xl lg:text-6xl ">
+                Always Where <i className="text-[#C6A867]" >You</i>  Are!
               </h1>
 
               <p
